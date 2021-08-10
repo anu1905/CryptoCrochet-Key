@@ -76,7 +76,7 @@ Following these steps may require some patience and gut-feeling, especially if y
 ### Licensing Information 
 This tutorial is licensed under the Creative Commons Zero v1 (CC0 1.0) Universal license.
 
-### References (further reading):
+### References (further reading)
 1. Ahmed, Sara., & Stacey, Jackie. (Eds.). (2001). Thinking through the skin. Psychology Press.
 2. D'Ignazio, Catherine., & Klein, Lauren. F. (2020). Data feminism. MIT press.
 3. Garland Thomson, Rosemarie. (1997). Extraordinary bodies: Figuring physical disability in American culture and literature. Columbia University Press.
