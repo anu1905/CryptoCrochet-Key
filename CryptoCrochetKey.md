@@ -1,0 +1,282 @@
+## Title: Secure Your Home IoT with the CryptoCrochetKey
+_A Tutorial By Anuradha Reddy_
+Email: anu1905@gmail.com
+Twitter: @anu1905
+
+![The first image shows a hacker news website featuring my CryptoCrochet-Key project. The article states “Anuradha Reddy’s CryptoCrochet-Key Gives You a Unique, Huggable Security Token for Home IoT.” The second image on the top right is the software application called ‘Teachable Machine’ where I’m training the Machine to learn how my crochet key looks using my computer webcam. The third image on the bottom right is a picture of my hand with the key testing on a Raspberry Pi computer.](https://miro.medium.com/max/1400/1*xj7IltEwUuRxjCcMKcJqOQ.jpeg)
+
+### Abstract
+In a brave new world of quantum encryption, cryptocurrencies and NFT transactions, the concept of a ‘key’ is evermore abstracted by mathematical calculations when compared to the flat metal items we store in our pockets and purses. While digitally encrypted keys can make transactions relatively secure—like receiving an email, ordering a pizza, or dis/arming your home, they continue to be cryptic devices for those of us who are not already familiar with the technology nor supported by a civic hacker community. Is it possible to make a physical key, unique enough to avoid forgery while being recognisable to a local computer for making safe transactions? Thanks to a handy textile yarn called ‘Crypto’ and some inspirational reading on programmable yarn, it _is_ possible to physically encrypt a key through crochet and then to teach a computer to recognize the crocheted key using Machine Learning. The _CryptoCrochet-Key_ is meant to be part ‘hack’ and part ‘pedagogical device’ that defamiliarizes existing computational practices (learning code) from an intersectional feminist lens. It is meant to be inclusive and empowering for those skilled in other ways than traditional programmers and to show how their skills can contribute to a critical discussion of data-driven technologies—i.e. by putting the tech to radically different uses. This 3-part tutorial begins by introducing CryptoCrochet-Key with instructions for making the key and then moves to the Machine Learning part of the project. The final part shows how to run the CryptoCrochet-Key Machine Learning model securely on a Raspberry Pi 4.
+##### Keywords: Crochet, Machine Learning, Critical Making
+
+### Description
+Crochet/knitting is a handicraft practice with strong associations to feminine, domestic hobbies and leisure. Although anyone who has engaged in the practice knows that it is, in fact, an intellectually demanding activity, one that takes advantage of the mathematical and mechanical properties of yarn and knitted fabric — anticipating how the material behaves with every stitch. Dr. Elisabetta Matsumoto, a physicist, has even argued that “yarn is programmable” and “knitting is coding” in her [New York Times](https://www.nytimes.com/2019/05/17/science/math-physics-knitting-matsumoto.html?smid=url-share) interview — a pedagogy that goes beyond coding binaries (ones and zeroes). Additionally, crocheting is an act of distributed cognition — a complex choreography between reading coded patterns and making corresponding hand movements with more than a single apparatus, sometimes in a social setting if one can afford it. Like other handicrafts, crochet does not separate the mind’s intellect from that of the body(ies). This argument is central to feminist, queer, and disability theories and a critique against positivist data-driven paradigms that strive to model reality from disembodied datasets (Thomson, 1997; Skeggs, 1997; Ahmed and Stacey, 2001; D'Ignazio and Klein, 2020). The act of crochet/knitting is also a labour of love, joy, and gift-giving — a kind of pushback and resistance to agile and extractive data-driven technology practices (Orton-Johnson, 2012; Hellstrom, 2013). If a community of crochet practitioners/fiber artists have a seat at the table with software developers and data science practitioners, what might they do (or say)? CryptoCrochet-Key is one possible answer.
+
+The word ‘crypto’ in CryptoCrochet has little to do with cryptography. Rather, the name is borrowed from a yarn called [crypto 8 ply](https://www.ausyarnco.com.au/products/browse-by-brand/panda/crypto-8-ply/default.aspx) manufactured by the Panda yarn company (AusYarnCo). This yarn is multicoloured/variegated, which lends itself to _joyfully_ crafting objects that are “[uniquely unique](https://www.hackster.io/news/anuradha-reddy-s-cryptocrochet-key-gives-you-a-unique-huggable-security-token-for-home-iot-222b422ed7f0)”. With each multicoloured stitch, it becomes possible to encrypt a discrete code/pattern in the shape of an object (in our case, a key) that only you have access to, and something only you can teach your computer to recognize. If you lose the key, you can easily make a new one and then teach your computer to recognize the new key and delete data for the old one. What makes the key-making process with variegated yarn especially enjoyable is one’s loss of control over the yarn’s colours, something one can liken to not being fully in control of how water travels when painting in watercolour. In the tutorial, we will learn how even the Machine Learning model has trouble making colour distinctions, something that we can use to our advantage to deliberately toy with the model.
+
+Here are some key takeaways from the tutorial: (1) inspiration for thinking of other non-traditional pedagogies for learning ‘how to code,’ (2) the empowerment to experiment with technologies or methods from industry (e.g. Machine Learning) using everyday materials — layered, thick, colourful, and patterned (like yarn), and (3) to re-deploy them for ends that were never intended by their creators through feminist, queering practices. The _CryptoCrochet-Key_ is just one of many adversarial things one can make with variegated yarns to tactically encounter smart surveillance and computer vision systems. Going forward, it is possible to imagine exploring an entirely new genre of security authentication via knitted fashions (sweaters, suits) and wearables.
+
+### The Tutorial
+#### Part 1: Making the Key
+Here’s what you will need to make the crocheted key. The first step is purchasing variegated/multicoloured yarn from your local yarn shop (fun!) and a crochet hook to go with it (the recommended size of the hook should be visible on the yarn packaging). I usually recommend a cotton yarn with a hook size of 3.5-4mm. You will also need some cotton wool for stuffing, stitch markers (or hairpins) for marking rounds and a tapestry needle with a wide eye to weave in loose yarn.
+
+Before starting to crochet, it is useful to know some standard crochet notations that will appear in this tutorial. We will use only basic crochet stitches like the [chain stitch](https://youtu.be/o-Il8OcNAZA) (denoted by ‘ch’), the [slip stitch](https://youtu.be/AFk-fdAowbY) (‘sl st’), and the [single crochet stitch](https://youtu.be/Ik-GSXWoSak) (‘sc’), which makes this a simple starter project. If you would like to learn the full range of crochet stitches, I can’t recommend [CraftyMinx’s](https://www.craftyminx.com/2011/11/crochet-school-.html/) crochet school enough. If you are already familiar with the techniques, then the next section should be a breeze. Remember that the key is made in separate parts — the top doughnut ring, the long leg and two short legs.
+
+You will the pattern instructions on Github or if you would like to slip away from the computer screen for this part of the tutorial, I compiled the instructions into a [PDF pattern](https://files.cargocollective.com/c989887/png2pdf_reduced.pdf) that you can print and take with you. Jump directly to Part 2 when you're done.
+
+##### The Doughnut
+![Alt text pattern for the doughnut: Row 1—Chain 13, slip stitch to the first chain to form a circle (continued)](https://miro.medium.com/max/9072/1*0QqWWecA0SqwkT62gNsmtQ.png)
+![Row 2–1sc x 13; Row 3–2sc x 13; Row 4–2sc, 1sc x 13. Cut and weave in yarn (continued)](https://miro.medium.com/max/9072/1*8lCVE8irdnsgiZ1xV00Fxw.png)
+![Row 5—(back to Row 1) 1sc x 13; Row 6–2sc x 13; Row 7–2sc, 1sc x 13.](https://miro.medium.com/max/9072/1*b6Wr4x55dNk11aufEXJrUw.png)
+![Stuff the middle with cotton. Weave together Row 4 and 7 to form the doughnut ](https://miro.medium.com/max/9072/1*oIOt-5XZDZscUEAVUn7VZg.png)
+
+##### The Long leg and Two Short Legs
+![Alt text pattern for the long leg: Row 1-Chain 16, Row 2 to 8-Chain1, 15sc, connect Row 1 and 8 to form a tube and lastly weave the tube shut.](https://miro.medium.com/max/9072/1*0Mp0uL7CJxpi4Pk3dVSung.png)
+![Alt text pattern for the two short legs: Row 1:Chain 9, Row 2 to 5:Chain 1, 8sc, connect Row 1 and 5 to form a tube and lastly weave the tube shut.](https://miro.medium.com/max/9072/1*gCJS_9DSyjIhZOObxqtdpg.png)
+![Repeat to make a second short leg and weave the long leg to the doughnut and the two short legs to the long leg (to resemble a key)](https://miro.medium.com/max/1400/1*u7uAlxue5DjlSZeothTT0Q.png)
+
+#### Part 2: Teaching the Machine to Recognize Your Key
+Once you’ve made your key, you can teach your computer to recognize it. In technical terms, this entails a complex process of combining the Transfer Learning technique (unsupervised Machine Learning — Neural Nets) with an Object Detection model (a pretrained Machine Learning model) and Computer Vision (CV) that uses a camera to ‘see’ the object and learn what it looks like. Executing this feat would ideally require a prior understanding of data science and analytics, but luckily for us, there is readily available software that lets us train Machine Learning models without prerequisite programming skills or data science knowledge. We will use one such browser-based software program called ‘[Teachable Machine](https://teachablemachine.withgoogle.com/)’ for this part of the tutorial.
+
+Teachable Machine (TM) is a software to train your computer to recognize unique sounds, images, and body poses, allowing you to personalize your interactions with the computer. For example, with TM we can capture a large number of images of the crochet key via the computer’s webcam — from different angles and under different light conditions — and use those images as training data for the model. Once trained, the computer can predict with some degree of confidence whether what it sees is your key or some other object.
+
+This is easy to do. We start an ‘Image Project’ and create classes for the kinds of objects we want or do not want the machine or computer to recognize.
+
+![Screenshot of the interface of Teachable Machine’s Image Project](https://miro.medium.com/max/1400/1*N_JK92O0M0e2aLUo_9KvCA.png)
+
+For example, I made three keys, each with their unique variegated patterns. I wanted my computer to be able to recognize them individually. I named the keys ‘Candy,’ ‘Blossom’ and ‘Sunny’ (for my own visual recognition sake) and created separate classes for each of them.
+
+![Three different crocheted keys that I named - Candy, Blossom, and Sunny](https://miro.medium.com/max/1400/1*XUD3Dml4dTlS-CfKdjSQMw@2x.png)
+
+For each key’s class, I used the ‘webcam’ option to feed as many images as possible for that key. I also created a fourth class called ‘Empty’ because I also trained my computer on what it sees when there is no key in view.
+
+![Screenshot of feeding images of a key via Webcam to Teachable Machine](https://miro.medium.com/max/890/1*OGg1OP15Mxq4g6IWFiOh6A.png)
+
+Once data is fed, the next step is to ‘train the model’. This takes some time depending on the number of images, so it is recommended not to switch browser tabs while the training is ongoing. The result of the training can be viewed in the preview window to the right, which also lets you test your trained model.
+
+![Screenshot of training the Machine Learning model through separate key image classes on Teachable Machine](https://miro.medium.com/max/2400/1*Wx13hBVZRV7am2JH7nY20Q.png)
+
+When I presented the reverse side of Candy to the camera (image below), the model was only 78% confident that it was seeing Candy and 22% confident it was seeing Blossom. This confusion occurs because both Candy and Blossom share similar visual features from their source material but are still different enough to be recognized on their own. We can take advantage of this model uncertainty by creating several look-alike objects that are memorable to us (because we make them) but not easily distinguishable to the machine. This is the opposite of the “10000 bowls of plain oatmeal” problem found in procedural generation algorithms, where a machine can generate 10000 bowls of oatmeal with each oat in a different size and orientation. While every oat is mathematically unique to the machine, the human cannot distinguish them nor appreciate their uniqueness. The crochet-key flips this problem around by queering the objects and the training data. Using variegated yarn in this way can help to play within the boundaries of the object detection machine learning models.
+
+![Screenshot of testing key-recognition via the preview window of Teachable Machine ](https://miro.medium.com/max/1400/1*lxpaxY2RwAFgwXkIs-GNUQ.png)
+
+What is also attractive about TM is that the training happens locally in your browser and not elsewhere on the ‘cloud’ network, which means it is possible to download and run the TM model offline, thus allowing you to secure your project even further. This is possible by exporting your trained model using the TensorFlow framework — an open-source framework that supports machine learning on edge devices (e.g. on a browser window, on a tiny computer such as Raspberry Pi, or even a microcontroller such as Arduino Nano BLE Sense). For the remainder of the tutorial, I will demonstrate how you can create an offline secure application of the cryptocrochet-key TM model on a smaller computer i.e. the Raspberry Pi 4 using TensorFlow.
+
+#### Part 3: CryptoCrochet-Key on a Raspberry Pi 4 with TensorFlow
+We have come a long way! But truth be told, we still have some way to go and this is my least favourite part of the tutorial because it is the most technical and the part I feel least confident about. However, it is a crucial section as it adds another layer of security to the project.
+
+You will need a Raspberry Pi 4 to go on from here. Sadly, the previous versions of RPi do not have sufficient processing power to run TensorFlow on them. Additionally, you will need a Raspberry Pi Camera Board v2 and a display board so you can see what the RPi 4 is seeing and recognizing. For the display, I used a PiTFT 2.8" Resistive Touchscreen board that I already had at home, although [Adafruit](https://learn.adafruit.com/running-tensorflow-lite-on-the-raspberry-pi-4) recommends an all-in-one board called BrainCraft HAT that is tailored especially for Machine Learning with RPi 4. I know this is a lot of expensive gadgetry to ask of a beginner or amateur maker, so if you can access a maker/hackerspace in your local area that allows you to borrow or rent this equipment, I would recommend that instead. There’s also a learning curve to this part of the tutorial but I think pushing through it can help to overcome the fears that some of us hold for typing terminal commands to install libraries and other software dependencies. In other words, if you are new to hardware making/hacking, consider this a learning experience than an implementation.
+
+![Testing key-recognition via a Touchscreen display and a Raspberry Pi running the Machine Learning model on Teachable Machine.](https://miro.medium.com/max/1400/0*mDYEjJSUxK1uK_JP)
+
+I followed this Adafruit [tutorial](https://learn.adafruit.com/teachable-machine-raspberry-pi-tensorflow-camera/getting-started) (by Andrew Reusch) to help me run the CryptoCrochet-Key TM model on Raspberry Pi 4. The tutorial is generally comprehensive, especially the TM part. However, I realised that there is actually a LOT of software setup and installations to be made for the RPi 4. I found help for this in another tutorial, but to save time, I will list out the steps I followed with links to each of them.
+
+Step 1: [Initial setup on RPi 4](https://learn.adafruit.com/running-tensorflow-lite-on-the-raspberry-pi-4/initial-setup)
+Step 2: [Display setup for both BrainCraft and Resistive Touchscreen](https://learn.adafruit.com/running-tensorflow-lite-on-the-raspberry-pi-4/display-setup)
+Step 3: [Camera setup and test](https://learn.adafruit.com/running-tensorflow-lite-on-the-raspberry-pi-4/camera-test)
+Step 4: [Install TensorFlow](https://learn.adafruit.com/running-tensorflow-lite-on-the-raspberry-pi-4/tensorflow-lite-2-setup) (yes, the title says TensorFlow ‘Lite’ but it actually installs TensorFlow)
+Step 5: [Visit TM and create classes](https://learn.adafruit.com/teachable-machine-raspberry-pi-tensorflow-camera/create-categories) (you already know this :))
+Step 6: [Capturing images via RPi’s camera](https://learn.adafruit.com/teachable-machine-raspberry-pi-tensorflow-camera/use-raspberry-pi-camera)
+Step 7: [Train model](https://learn.adafruit.com/teachable-machine-raspberry-pi-tensorflow-camera/use-raspberry-pi-camera)
+Step 8: [Export TensorFlow model from TM and transfer onto the RPi 4](https://learn.adafruit.com/teachable-machine-raspberry-pi-tensorflow-camera/transferring-to-the-pi)
+
+![A moving GIF image showing how the Machine Learning model fails to accurately recognize the crochet keys.](https://miro.medium.com/max/1200/1*bYYIgwKHUbfwrOZ5PX8j1g.gif)
+
+Following these steps may require some patience and gut-feeling, especially if you are a newbie to terminal commands. It does work eventually! I even managed to play with the model’s uncertainty e.g. the GIF image above shows the model’s inability to distinguish between Candy and Sunny. In the end, I never deployed this project as a home security system because part of the fun was just seeing if I could and for it to be a learning experience.
+
+### Licensing Information 
+This tutorial is licensed under the Creative Commons Attributions (CC-BY-4.0) license.
+
+### References (further reading):
+1. Ahmed, Sara., & Stacey, Jackie. (Eds.). (2001). Thinking through the skin. Psychology Press.
+2. D'Ignazio, Catherine., & Klein, Lauren. F. (2020). Data feminism. MIT press.
+3. Garland Thomson, Rosemarie. (1997). Extraordinary bodies: Figuring physical disability in American culture and literature. Columbia University Press.
+4. Hellstrom, Maria. (2013). Knitting ourselves into being: The case of labour and hip domesticity on the social network Ravelry. com.
+5. Orton-Johnson, Kate. (2014). Knit, purl and upload: New technologies, digital mediations and the experience of leisure. Leisure studies, 33(3), 305-321.
+6. Skeggs, Beverley. (1997). Formations of class & gender: Becoming respectable. Sage.
+
+
+
+
+- Type some Markdown on the left
+- See HTML in the right
+- ✨Magic ✨
+
+## Features
+
+- Import a HTML file and watch it magically convert to Markdown
+- Drag and drop images (requires your Dropbox account be linked)
+- Import and save files from GitHub, Dropbox, Google Drive and One Drive
+- Drag and drop markdown and HTML files into Dillinger
+- Export documents as Markdown, HTML and PDF
+
+Markdown is a lightweight markup language based on the formatting conventions
+that people naturally use in email.
+As [John Gruber] writes on the [Markdown site][df1]
+
+> The overriding design goal for Markdown's
+> formatting syntax is to make it as readable
+> as possible. The idea is that a
+> Markdown-formatted document should be
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
+
+This text you see here is *actually- written in Markdown! To get a feel
+for Markdown's syntax, type some text into the left window and
+watch the results in the right.
+
+## Tech
+
+Dillinger uses a number of open source projects to work properly:
+
+- [AngularJS] - HTML enhanced for web apps!
+- [Ace Editor] - awesome web-based text editor
+- [markdown-it] - Markdown parser done right. Fast and easy to extend.
+- [Twitter Bootstrap] - great UI boilerplate for modern web apps
+- [node.js] - evented I/O for the backend
+- [Express] - fast node.js network app framework [@tjholowaychuk]
+- [Gulp] - the streaming build system
+- [Breakdance](https://breakdance.github.io/breakdance/) - HTML
+to Markdown converter
+- [jQuery] - duh
+
+And of course Dillinger itself is open source with a [public repository][dill]
+ on GitHub.
+
+## Installation
+
+Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd dillinger
+npm i
+node app
+```
+
+For production environments...
+
+```sh
+npm install --production
+NODE_ENV=production node app
+```
+
+## Plugins
+
+Dillinger is currently extended with the following plugins.
+Instructions on how to use them in your own application are linked below.
+
+| Plugin | README |
+| ------ | ------ |
+| Dropbox | [plugins/dropbox/README.md][PlDb] |
+| GitHub | [plugins/github/README.md][PlGh] |
+| Google Drive | [plugins/googledrive/README.md][PlGd] |
+| OneDrive | [plugins/onedrive/README.md][PlOd] |
+| Medium | [plugins/medium/README.md][PlMe] |
+| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+
+## Development
+
+Want to contribute? Great!
+
+Dillinger uses Gulp + Webpack for fast developing.
+Make a change in your file and instantaneously see your updates!
+
+Open your favorite Terminal and run these commands.
+
+First Tab:
+
+```sh
+node app
+```
+
+Second Tab:
+
+```sh
+gulp watch
+```
+
+(optional) Third:
+
+```sh
+karma test
+```
+
+#### Building for source
+
+For production release:
+
+```sh
+gulp build --prod
+```
+
+Generating pre-built zip archives for distribution:
+
+```sh
+gulp build dist --prod
+```
+
+## Docker
+
+Dillinger is very easy to install and deploy in a Docker container.
+
+By default, the Docker will expose port 8080, so change this within the
+Dockerfile if necessary. When ready, simply use the Dockerfile to
+build the image.
+
+```sh
+cd dillinger
+docker build -t <youruser>/dillinger:${package.json.version} .
+```
+
+This will create the dillinger image and pull in the necessary dependencies.
+Be sure to swap out `${package.json.version}` with the actual
+version of Dillinger.
+
+Once done, run the Docker image and map the port to whatever you wish on
+your host. In this example, we simply map port 8000 of the host to
+port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
+
+```sh
+docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
+```
+
+> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
+
+Verify the deployment by navigating to your server address in
+your preferred browser.
+
+```sh
+127.0.0.1:8000
+```
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+   [dill]: <https://github.com/joemccann/dillinger>
+   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
+   [john gruber]: <http://daringfireball.net>
+   [df1]: <http://daringfireball.net/projects/markdown/>
+   [markdown-it]: <https://github.com/markdown-it/markdown-it>
+   [Ace Editor]: <http://ace.ajax.org>
+   [node.js]: <http://nodejs.org>
+   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
+   [jQuery]: <http://jquery.com>
+   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
+   [express]: <http://expressjs.com>
+   [AngularJS]: <http://angularjs.org>
+   [Gulp]: <http://gulpjs.com>
+
+   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
+   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
+   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
+   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
+   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
+   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
